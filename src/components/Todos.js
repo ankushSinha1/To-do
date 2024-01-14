@@ -25,9 +25,10 @@ const Todos = (props) => {
         type="text"
         onChange={(e) => setTodo(e.target.value)}
         className="todo-input"
+        placeholder="Add new task"
         value={todo}
       />
-      <button onClick={() => add()}> Add</button>
+      <button className="add-btn"onClick={() => add()}> Add</button>
       <br />
     </div>
   );
