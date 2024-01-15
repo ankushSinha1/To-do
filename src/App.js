@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <motion.h1>
-        Todo App
+        Get it Done!
       </motion.h1>
       <motion.div>
         <Todos />

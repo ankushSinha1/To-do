@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodos } from "../redux/reducer";
-import { GoPlus } from "react-icons/go";
-import { motion } from "framer-motion";
-
 const Todos = (props) => {
   const [todo, setTodo] = useState("");
   const add = () => {

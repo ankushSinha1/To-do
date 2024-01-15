@@ -13,30 +13,30 @@ html {
 
 body {
   background: linear-gradient(
-    190deg,
-    rgb(134, 123, 205) 0%,
-    rgb(106, 90, 171) 100%
+    to bottom,
+    rgb(142, 133, 202) 0%,
+    rgb(87, 66, 171) 100%
   );
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: #222;
-  overflow: hidden;
 }
 
 .App {
-  margin-top: 3rem;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .App h1 {
   display: inline;
   text-align: center;
   margin-bottom: 2rem;
-  color: #e1ebfd;
+  color: #e9eef9;
 
-  text-shadow: 0 0 5px #433aa8, 3px -1px 5px #271c6c;
+  text-shadow: 2px 0 10px #433aa8;
 }
 
 .addTodos {
@@ -58,12 +58,13 @@ body {
 }
 .todo-input:focus {
   outline: none;
-  border: 2px solid rgb(67, 58, 168);
+  border: 2px solid rgb(125, 121, 176);
+  background-color: #d0e0fc;
 }
 
 .add-btn {
   margin-left: 1rem;
-  background-color: #271c6c;
+  background-image: linear-gradient(to top, #271c6c 10%,  rgb(67, 58, 168));
   color: #e1ebfd;
   border-radius: 6px;
   border: 2px solid #e1ebfd;
@@ -71,13 +72,15 @@ body {
   width: 3.2rem;
   /* height: 3.2rem; */
   cursor: pointer;
+  transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: 2px 4px 20px #271c6c;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.add-btn:hover{
+  background-image: linear-gradient(to top, #271c6c 70%,  rgb(67, 58, 168));
+}
 .add-btn:active {
   outline: none;
   border: 3px solid #271c6c;
@@ -92,7 +95,7 @@ body {
 
 .displaytodos .buttons {
   margin: 1rem auto 2rem auto ;
-  width: 45%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
@@ -117,9 +120,12 @@ body {
 .displaytodos ul {
   list-style: none;
   display: flex;
+  /* justify-content: space-around; */
   align-self: flex-start;
   flex-wrap: wrap;
-  margin-left: 5%;
+  margin: 0 5%;
+  padding: 0 10px;
+  overflow: auto;
 }
 
 .card {
@@ -134,24 +140,11 @@ body {
 
   margin: 0 1rem 1rem 0;
   height: 8rem;
-  width: 18rem;
+  width: 23rem;
   border-radius: 0.5rem;
   padding: 1rem;
 
   position: relative;
-}
-
-.card textarea {
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #e1ebfd;
-
-  color: #271c6c;
-  height: 70%;
-}
-.card textarea:disabled {
-  background-color: transparent;
 }
 
 .card .btns {
@@ -189,7 +182,7 @@ body {
 
 @media Screen and (max-width: 640px) {
   .displaytodos {
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 2rem;
   }
   .displaytodos ul {
