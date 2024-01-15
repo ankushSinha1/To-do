@@ -6,11 +6,6 @@ const TodoItem = (props) => {
   const { item, removeTodo, completeTodo } = props;
 
   const inputRef = useRef(true);
-
-  const changeFocus = () => {
-    inputRef.current.disabled = false;
-    inputRef.current.focus();
-  };
   return (
     <motion.li
       
